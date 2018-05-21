@@ -1,0 +1,56 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Simple Table</h4>
+                        <p class="category">Here is a subtitle for this table</p>
+                    </div>
+                    <div class="card-content table-responsive">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Country</th>
+                                    <th>Age</th>
+                                    <th>Gender</th>
+                                    <th>Phone No</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let user of users">
+                                    <td>{{ user.firstName }} </td>
+                                    <td>{{ user.lastName }} </td>
+                                    <td>{{ user.country }} </td>
+                                    <td>{{ user.age }} </td>
+                                    <td>{{ user.gender }} </td>
+                                    <td>{{ user.phoneNo }} </td>
+                                    <td class="td-actions text-right">
+                                                        <a [routerLink]="['/user-edit', user._id]" class="btn btn-primary btn-simple btn-xs"><i class="material-icons">edit</i></a>
+                                                        <a [routerLink]="['/user-edit', user._id]" class="btn btn-primary btn-simple btn-xs"></a>
+                                                        <button type="button" rel="tooltip" title="Remove" (click)="deleteUser(user._id)" class="btn btn-danger btn-simple btn-xs">
+                                                        <i class="material-icons">close</i>
+                                                    </button>
+                                                </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

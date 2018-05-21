@@ -1,0 +1,16 @@
+<div class="login-page">
+  <div class="form">
+    <form (ngSubmit)="saveUser()" #userForm="ngForm" class="register-form">
+      <input type="text" [(ngModel)]="user.firstName"  required name="firstName" class="form-control" placeholder="First name" >
+      <input type="text" [(ngModel)]="user.lastName"  required name="lastName" class="form-control" placeholder="Last name"  >
+      <input type="text" [(ngModel)]="user.country"  required name="country" class="form-control" placeholder="Country"  >
+      <input type="text" [(ngModel)]="user.age"  required name="age" class="form-control" placeholder="Age" >
+      <input type="text" [(ngModel)]="user.gender"  required name="gender" class="form-control" placeholder="Gender" >
+      <input type="text" [(ngModel)]="user.email"  required name="phoneNo" class="form-control" placeholder="Email" >
+      <input type="text" [(ngModel)]="user.phoneNo"  required name="phoneNo" class="form-control" placeholder="Phone No." >
+      <button type="submit" class="btn btn-success" >Save</button>
+                        <div class="clearfix"></div>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+  </div>
+</div>
